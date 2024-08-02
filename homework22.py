@@ -3,8 +3,8 @@ from threading import Thread
 from datetime import datetime
 def wite_words(word_count, file_name):
     with open(file_name, 'a', encoding='UTF-8') as file:
-        for i in range(word_count):
-            file.write(f'Какое-то слово № {i} \n')
+        for i in range(1, word_count + 1):
+            file.write(f'Какое-то слово № {i}' +  '\n')
             sleep(0.1)
         print(f'Завершилась запись в файл {file.name}')
 time_start = datetime.now()
